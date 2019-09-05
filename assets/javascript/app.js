@@ -20,6 +20,7 @@ function populateButtons(searchArray, classToAdd, areaToAddTo){
 
 // Hits giphy api for data, collects still, collects animated url and appends gif
 $(document).on('click', '.searchButton', function(){
+    $('#searches').empty();
     var type = $(this).data('type');
     var queryURL = 'http://api.giphy.com/v1/gifs/search?q='+type+'&api_key=uQIcYcgq3RPyde5FOKWYggxoWS7A9hFN&limit=10'
     $.ajax({url: queryURL, method: 'GET'})
