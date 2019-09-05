@@ -4,7 +4,7 @@ $(function(){
 })
 
 
-var searchArray = ['dog', 'cat', 'bird'];
+var searchArray = ['Dog', 'Cat', 'Bird'];
 
 // Populates buttons to page
 function populateButtons(searchArray, classToAdd, areaToAddTo){
@@ -25,7 +25,7 @@ $(document).on('click', '.searchButton', function(){
     $.ajax({url: queryURL, method: 'GET'})
         .done(function(response){
             for(var i=0; i<response.data.length; i++){
-                var searcgDiv = $('<div class="search-item">');
+                var searchDiv = $('<div class="search-item">');
                 var rating = response.data[i].rating;
                 var p = $('<p>').text('rating: ' + rating);
                 var animated = response.data[i].images.fixed_height.url;
