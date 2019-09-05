@@ -42,3 +42,24 @@ $(document).on('click', '.searchButton', function(){
             }        
         })
 })
+
+// Allows gifs to be paused and played upon being clicked
+$(document).on('click', '.searchImage', function(){
+    var state = $(this).attr('data-state');
+    if(state == 'still'){
+        $(this).attr('src', $(this).data('animated'));
+        $(this).attr('data-state', 'animated');
+    } else {
+        $(this).attr('src', $(this).data('still'));
+        $(this).attr('data-state', 'still');
+    }
+})
+
+// Adds input to the array to the page
+$('#addSearch').on('click', function(){
+    var newSearch = $('input').eq(0).val();
+    searchArray.push(newSearch);
+    populateButtons(searchArray, 'searchButton','#buttonArea');
+    return false;
+})
+  
