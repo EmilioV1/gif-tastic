@@ -58,7 +58,9 @@ $(document).on('click', '.searchImage', function(){
 
 // Adds input to the array and populates button to page
 $('#addSearch').on('click', function(){
+    console.log('I have been clicked');
     var newSearch = $('input').eq(0).val();
+    console.log(newSearch);
     searchArray.push(newSearch);
     populateButtons(searchArray, 'searchButton','#buttonsArea');
     return false;
