@@ -1,5 +1,5 @@
 $(function(){
-    populateButtons(searchArray, 'searchButton', '#buttonArea');
+    populateButtons(searchArray, 'searchButton', '#buttonsArea');
     console.log("page loaded");
 })
 
@@ -28,7 +28,7 @@ $(document).on('click', '.searchButton', function(){
             for(var i=0; i<response.data.length; i++){
                 var searchDiv = $('<div class="search-item">');
                 var rating = response.data[i].rating;
-                var p = $('<p>').text('rating: ' + rating);
+                var p = $('<p>').text('Rating: ' + rating);
                 var animated = response.data[i].images.fixed_height.url;
                 var still = response.data[i].images.fixed_height_still.url;
                 var image = $('<img>');
@@ -44,7 +44,7 @@ $(document).on('click', '.searchButton', function(){
         })
 })
 
-// Allows gifs to be paused and played upon being clicked
+// // Allows gifs to be paused and played upon being clicked
 $(document).on('click', '.searchImage', function(){
     var state = $(this).attr('data-state');
     if(state == 'still'){
@@ -56,11 +56,12 @@ $(document).on('click', '.searchImage', function(){
     }
 })
 
-// Adds input to the array to the page
+// Adds input to the array and populates button to page
 $('#addSearch').on('click', function(){
     var newSearch = $('input').eq(0).val();
     searchArray.push(newSearch);
-    populateButtons(searchArray, 'searchButton','#buttonArea');
+    populateButtons(searchArray, 'searchButton','#buttonsArea');
     return false;
 })
+
   
