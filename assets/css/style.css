@@ -2,12 +2,33 @@
     align-content: center;
 }
 
-.searchButton{
-    margin: 10px;
-    padding: 5px 5px;
-    border: 10px purple;    
-}
-
 h1{
     text-align: center
+}
+
+.card{
+    margin: 20px;
+    padding: 10px;
+}
+
+body{
+    background-image: url("https://static.videezy.com/system/resources/thumbnails/000/005/082/original/macro-plex-4k-motion-background-loop.jpg");
+} 
+
+.searchButton{
+    margin:5px;
+    box-shadow: 2px 2px 2px grey;
+}
+
+#searches{
+    margin: 15px;
+    padding: 10px;
+}
+
+img{
+    height: 300px;
+    width: 310px;
+}
+.search-item{
+    margin: 20px;
 }
