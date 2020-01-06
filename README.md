@@ -5,7 +5,7 @@ Have fun searching gifs to share with your colleagues, family and friends.
 
 ## Deployed Site
 
-https://nolimits1.github.io/gif-tastic/
+https://emiliov1.github.io/gif-tastic/
 
 
 ## Contributing
